@@ -1,0 +1,102 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Prediction</title>
+</head>
+<body>
+    <div style="text-align: center; padding: 20px;">
+        <h2>Weight Prediction</h2>
+        <form action="/predict" method="post">
+            <label for="height">Enter Height (in cm):</label>
+            <input type="text" id="height" name="height" required>
+            <br><br>
+            <button type="submit">Predict Weight</button>
+        </form>
+        {% if prediction_text %}
+            <p>{{ prediction_text }}</p>
+        {% endif %}
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha384-rnsqRlXUzIT3jLVs+8dEq5irxzUn9VuSTCPA1z9we5CxGo6oFfb4FYU9K5KoElkN" crossorigin="anonymous">
+    <!-- <style>
+        body {
+            background-color: #333; /* Dark background color */
+            color: #fff; /* Light text color */
+            font-family: 'Arial', sans-serif;
+        }
+
+        div {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #00bcd4; /* Accent color */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-top: 10px;
+            color: #00bcd4; /* Accent color */
+        }
+
+        input {
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #00bcd4; /* Accent color */
+            border-radius: 5px;
+            background-color: #444; /* Dark input background color */
+            color: #fff; /* Light text color */
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #00bcd4; /* Accent color */
+            color: #fff; /* Light text color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #00796b; /* Darker accent color on hover */
+        }
+
+        p {
+            margin-top: 20px;
+            color: #00bcd4; /* Accent color */
+        }
+    </style> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div>
+        <h2>Weight Prediction</h2>
+        <form action="/predict" method="post">
+            <label for="height">Enter Height (in cm):</label>
+            <input type="text" id="height" name="height" required>
+            <br><br>
+            <button type="submit"><i class="fas fa-weight"></i> Predict Weight</button>
+        </form>
+        {% if prediction_text %}
+            <p>{{ prediction_text }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
